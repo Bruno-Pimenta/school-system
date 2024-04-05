@@ -1,7 +1,9 @@
 package br.com.vainaweb.projetofinal.model;
 
+import br.com.vainaweb.projetofinal.dto.DadosEndereco;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.NoArgsConstructor;
@@ -11,26 +13,25 @@ import org.hibernate.validator.constraints.br.CPF;
 @Setter
 @NoArgsConstructor
 @MappedSuperclass
+@AllArgsConstructor
 public abstract class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    @Email
-    @Column(unique = true)
-    private String email;
-
     @CPF
     @Column(unique = true)
     private String cpf;
-
+    @Email
+    @Column(unique = true)
+    private String email;
     @Embedded
     private Endereco endereco;
 
-    public Pessoa(String nome, String email, String cpf, Endereco endereco) {
+    public Pessoa(String nome, String cpf, String email, DadosEndereco endereco) {
         this.nome = nome;
-        this.email = email;
         this.cpf = cpf;
-        this.endereco = endereco;
+        this.email = email;
+        this.endereco = new Endereco(endereco);
     }
 }

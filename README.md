@@ -14,7 +14,7 @@ create database bd_vainaweb;
 
 ## método Post
 
-- Consiste em inserir as entidades no banco de dados
+- Consiste em inserir os registros das entidades no banco de dados
 
 ![Cadastro de aluno feito com sucesso!](https://github.com/Bruno-Pimenta/school-system/blob/main/assets/funcionalidades/Post-Aluno.png)
 

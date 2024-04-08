@@ -45,7 +45,7 @@ create database bd_vainaweb;
 
 ![Alteração de dados de um registro de aluno](https://github.com/Bruno-Pimenta/school-system/blob/main/assets/funcionalidades/Put-Aluno.png)
 
- - Não é aceito a tentativa de atualizar e-mail em nenhuma das duas entidades.
+ - Não é aceito a tentativa de atualizar e-mail, caso o mesmo já estiver cadastrado, em nenhuma das duas entidades.
 
 ![Restrição quanto a alteração](https://github.com/Bruno-Pimenta/school-system/blob/main/assets/funcionalidades/Put-Aluno-E-mailCadastrado.png)
 
@@ -58,7 +58,7 @@ create database bd_vainaweb;
 
 ![Deletado com sucesso](https://github.com/Bruno-Pimenta/school-system/blob/main/assets/funcionalidades/Delete-Colaborador-Ok.png)
 
- - Também retorná um Not Found caso tentar deletar um registro de um id que não existe. Nesse caso haverá uma mensagem no corpo da resposta da requisição.
+ - Também retorná um Not Found caso tentar deletar um registro de um id que não existe. Nesse caso haverá uma mensagem no corpo da resposta.
 
 ![Não existe o registro para ser apagado](https://github.com/Bruno-Pimenta/school-system/blob/main/assets/funcionalidades/DeleteColaborador-N%C3%A3oEnconstrado.png) 
 
